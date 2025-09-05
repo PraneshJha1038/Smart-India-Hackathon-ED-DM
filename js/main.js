@@ -1,4 +1,4 @@
-// Scroll Animations for all elements
+
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.fade-in, .slide-left, .slide-right');
 
@@ -12,25 +12,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('show');
             } else {
-                // If you want animations to repeat when scrolling back up, uncomment this line:
-                // entry.target.classList.remove('show');
+                entry.target.classList.remove('show');
             }
         });
     }, observerOptions);
 
     animatedElements.forEach(el => observer.observe(el));
-
-    // ===========================
-    // Hero Typewriter + Paragraph + Button Fade-In
-    // ===========================
     const heading = document.getElementById('hero-heading');
     const subtext = document.getElementById('hero-subtext');
     const heroButtons = document.querySelectorAll('.hero-buttons .btn');
     const text = heading.textContent;
-    heading.textContent = ''; // clear text for typing effect
+    heading.textContent = '';
 
     let i = 0;
-    const speed = 100; // milliseconds per letter
+    const speed = 100; 
 
     function typeWriter() {
         if (i < text.length) {
@@ -38,14 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
             i++;
             setTimeout(typeWriter, speed);
         } else {
-            // Fade in paragraph after heading finishes
+            
             subtext.style.opacity = 0;
             subtext.style.display = 'block';
             subtext.style.transition = 'opacity 1s ease-in';
             setTimeout(() => {
                 subtext.style.opacity = 1;
-
-                // Fade in hero buttons after paragraph appears
                 heroButtons.forEach((btn, index) => {
                     btn.style.opacity = 0;
                     btn.style.transition = `opacity 0.8s ease ${index * 0.3}s`;
@@ -59,3 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     typeWriter();
 });
+

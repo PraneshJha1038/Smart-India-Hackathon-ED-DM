@@ -18,11 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     animatedElements.forEach(el => observer.observe(el));
+
     const heading = document.getElementById('hero-heading');
     const subtext = document.getElementById('hero-subtext');
     const heroButtons = document.querySelectorAll('.hero-buttons .btn');
     const text = heading.textContent;
-    heading.textContent = '';
+    heading.textContent = ''; 
 
     let i = 0;
     const speed = 100; 
@@ -39,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
             subtext.style.transition = 'opacity 1s ease-in';
             setTimeout(() => {
                 subtext.style.opacity = 1;
+
+                
                 heroButtons.forEach((btn, index) => {
                     btn.style.opacity = 0;
                     btn.style.transition = `opacity 0.8s ease ${index * 0.3}s`;
@@ -52,4 +55,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
     typeWriter();
 });
-

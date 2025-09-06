@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pranesh Jha">
+    <meta name="description" content="Login page for Ed Disaster platform">
+    <link rel="shortcut icon" href="img/sih31x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/admin-login.css">
+    <script src="js/admin-login.js"></script>
+    <title>Admin-Login | Ed Disaster</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="branding">
+                <img src="/img/sih31x32.png" width="32" height="32" alt="Ed Disaster Logo">
+                <span>Ed Disaster</span>
+            </div>
+            <div class="quicklinks">
+                <a href="index.html" class="quick-a">Home</a>
+                <a href="about.html" class="quick-a">About</a>
+                <a href="#" class="quick-a">Login/Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="admin-link" >
+            <a href="login.html" class="admin-btn">General Login</a>
+        </div>
+
+        <div class="container">
+            <div class="form-box fade-in">
+                <h1 class="title">Welcome Back</h1>
+                <p class="subtitle">Login to continue</p>
+
+                <!-- Error message container -->
+                <div id="error-message" class="error-message" style="display: none;"></div>
+
+                <form action="#" method="POST"
+                    onsubmit="event.preventDefault(); handleLogin(document.getElementById('username').value, document.getElementById('password').value);">
+                    <div class="input-group">
+                        <input type="text" id="username" required>
+                        <label for="username">Admin-Username</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="password" id="password" required>
+                        <label for="password">Password</label>
+                    </div>
+
+                    <button type="submit" class="btn">Login</button>
+                </form>
+
+                <p class="switch-text">
+                    Don't have an account? <a href="register.html">Register</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">&copy; 2025 Ed Disaster – Building safer campuses together.</div>
+    </footer>
+
+
+</body>
+
+</html>

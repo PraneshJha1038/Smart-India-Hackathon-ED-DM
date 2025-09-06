@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regional Alerts - DisasterEd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/student-landing.css">
+    <script src="/js/alerts.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="logo">DisasterEd</h1>
+                    <div class="header-subtitle">
+                        <p class="subtitle-main">Disaster Preparedness Education</p>
+                        <p class="subtitle-tagline">Building resilient and prepared communities</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">2</span>
+                    </div>
+                    <div class="user-profile">
+                        <span class="user-name">Pranesh jha</span>
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <h3 class="nav-section-title">Main Navigation</h3>
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="modules.html" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Education Modules</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="drills.html" class="nav-link">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Virtual Drills</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>Regional Alerts</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contacts.html" class="nav-link">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Emergency Contacts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <h1 class="page-title">Regional Alerts</h1>
+                <p class="page-subtitle">Stay informed about current emergencies and safety information in your area</p>
+
+                <!-- Active Alerts -->
+                <section class="section">
+                    <div class="section-header">
+                        <h3 class="section-title">Active Alerts (2)</h3>
+                        <p class="section-subtitle">Current emergency notifications for your region</p>
+                    </div>
+
+                    <div class="alert-list">
+                        <!-- High Priority Alert -->
+                        <div class="alert-card medium-severity">
+                            <div class="alert-header">
+                                <div class="alert-icon">
+                                    <i class="fas fa-cloud-rain"></i>
+                                </div>
+                                <h4 class="alert-title">Severe Thunderstorm Watch</h4>
+                                <span class="alert-type">Weather Warning</span>
+                            </div>
+                            <p class="alert-message">
+                                Thunderstorms with heavy rain and strong winds expected in the area until 8:00 PM.
+                                Stay indoors and avoid windows. Monitor local weather reports for updates.
+                            </p>
+                            <div class="alert-time">Issued: 2 hours ago</div>
+                        </div>
+
+                        <!-- Medium Priority Alert -->
+                        <div class="alert-card low-severity">
+                            <div class="alert-header">
+                                <div class="alert-icon">
+                                    <i class="fas fa-bell"></i>
+                                </div>
+                                <h4 class="alert-title">Campus Emergency Drill Scheduled</h4>
+                                <span class="alert-type">Campus Alert</span>
+                            </div>
+                            <p class="alert-message">
+                                Campus-wide emergency evacuation drill scheduled for next Tuesday at 2:00 PM.
+                                All students should participate and follow evacuation procedures.
+                            </p>
+                            <div class="alert-time">Issued: 1 day ago</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Alerts -->
+                <section class="section">
+                    <div class="section-header">
+                        <h3 class="section-title">Recent Alerts</h3>
+                        <p class="section-subtitle">Previously issued alerts and notifications</p>
+                    </div>
+
+                    <div class="alert-list">
+                        <div class="alert-card low-severity" style="opacity: 0.7;">
+                            <div class="alert-header">
+                                <div class="alert-icon">
+                                    <i class="fas fa-road"></i>
+                                </div>
+                                <h4 class="alert-title">Road Closure Advisory</h4>
+                                <span class="alert-type">Traffic Alert</span>
+                            </div>
+                            <p class="alert-message">
+                                Main Street closed due to construction work. Use alternate routes until further notice.
+                            </p>
+                            <div class="alert-time">Resolved: 3 days ago</div>
+                        </div>
+
+                        <div class="alert-card low-severity" style="opacity: 0.7;">
+                            <div class="alert-header">
+                                <div class="alert-icon">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h4 class="alert-title">Utility Maintenance</h4>
+                                <span class="alert-type">Maintenance</span>
+                            </div>
+                            <p class="alert-message">
+                                Scheduled power maintenance completed. All services have been restored to normal.
+                            </p>
+                            <div class="alert-time">Resolved: 1 week ago</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Safety Tips -->
+                <section class="section">
+                    <div class="section-header">
+                        <h3 class="section-title">Safety Tips</h3>
+                        <p class="section-subtitle">General safety reminders and preparedness tips</p>
+                    </div>
+
+                    <div class="actions-grid">
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-first-aid"></i>
+                            </div>
+                            <div class="action-content">
+                                <h4 class="action-title">Emergency Kit</h4>
+                                <p class="action-description">Keep a 72-hour emergency kit with water, food, and
+                                    supplies</p>
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="action-content">
+                                <h4 class="action-title">Emergency Contacts</h4>
+                                <p class="action-description">Save important emergency numbers in your phone</p>
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <div class="action-content">
+                                <h4 class="action-title">Evacuation Plan</h4>
+                                <p class="action-description">Know multiple evacuation routes from your location</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Alert Settings -->
+                <section class="section">
+                    <div class="section-header">
+                        <h3 class="section-title">Alert Preferences</h3>
+                        <p class="section-subtitle">Manage how you receive emergency notifications</p>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="email-alerts" checked>
+                                <label for="email-alerts" class="form-label">Email notifications</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="sms-alerts" checked>
+                                <label for="sms-alerts" class="form-label">SMS text messages</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="push-alerts" checked>
+                                <label for="push-alerts" class="form-label">Push notifications</label>
+                            </div>
+                        </div>
+                        <button class="btn btn--primary">Save Preferences</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <
+</body>
+
+</html>

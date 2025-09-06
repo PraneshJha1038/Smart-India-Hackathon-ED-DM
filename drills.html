@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Drills - DisasterEd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/student-landing.css">
+    <script src="/js/drills.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="logo">DisasterEd</h1>
+                    <div class="header-subtitle">
+                        <p class="subtitle-main">Disaster Preparedness Education</p>
+                        <p class="subtitle-tagline">Building resilient and prepared communities</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">2</span>
+                    </div>
+                    <div class="user-profile">
+                        <span class="user-name">Pranesh jha</span>
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <h3 class="nav-section-title">Main Navigation</h3>
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="modules.html" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Education Modules</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Virtual Drills</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="alerts.html" class="nav-link">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>Regional Alerts</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contacts.html" class="nav-link">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Emergency Contacts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <h1 class="page-title">Virtual Drills</h1>
+                <p class="page-subtitle">Practice emergency response scenarios in a safe environment</p>
+
+                <!-- Drill Grid -->
+                <div class="drill-grid">
+                    <!-- Earthquake Drill -->
+                    <div class="drill-card">
+                        <div class="drill-header">
+                            <div class="drill-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3 class="drill-title">Earthquake Response Drill</h3>
+                        </div>
+                        <p class="drill-description">
+                            Practice proper earthquake response in various scenarios including home, school, and outdoor
+                            situations.
+                        </p>
+                        <div class="drill-meta">
+                            <span class="drill-duration">
+                                <i class="fas fa-clock"></i> 10 minutes
+                            </span>
+                            <span class="drill-status">Not Completed</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn--primary" onclick="startDrill('earthquake')">Start Drill</button>
+                            <button class="btn btn--outline btn--small">View Instructions</button>
+                        </div>
+                    </div>
+
+                    <!-- Fire Drill -->
+                    <div class="drill-card">
+                        <div class="drill-header">
+                            <div class="drill-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3 class="drill-title">Fire Evacuation Drill</h3>
+                        </div>
+                        <p class="drill-description">
+                            Learn and practice fire evacuation procedures including escape route planning and assembly
+                            points.
+                        </p>
+                        <div class="drill-meta">
+                            <span class="drill-duration">
+                                <i class="fas fa-clock"></i> 8 minutes
+                            </span>
+                            <span class="drill-status">Not Completed</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn--primary" onclick="startDrill('fire')">Start Drill</button>
+                            <button class="btn btn--outline btn--small">View Instructions</button>
+                        </div>
+                    </div>
+
+                    <!-- Flood Drill -->
+                    <div class="drill-card">
+                        <div class="drill-header">
+                            <div class="drill-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <h3 class="drill-title">Flood Emergency Response</h3>
+                        </div>
+                        <p class="drill-description">
+                            Practice flood emergency response and evacuation procedures for different flood scenarios.
+                        </p>
+                        <div class="drill-meta">
+                            <span class="drill-duration">
+                                <i class="fas fa-clock"></i> 12 minutes
+                            </span>
+                            <span class="drill-status">Not Completed</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn--primary" onclick="startDrill('flood')">Start Drill</button>
+                            <button class="btn btn--outline btn--small">View Instructions</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drill Statistics -->
+                <section class="section" style="margin-top: 32px;">
+                    <div class="section-header">
+                        <h3 class="section-title">Your Drill Performance</h3>
+                        <p class="section-subtitle">Track your progress and improvement over time</p>
+                    </div>
+
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                            <div class="metric-value">0</div>
+                            <div class="metric-label">Drills Completed</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="metric-value">0%</div>
+                            <div class="metric-label">Average Score</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="metric-value">0</div>
+                            <div class="metric-label">Total Time</div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Drill Modal -->
+    <div id="drillModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Drill Title</h2>
+                <button class="modal-close" onclick="closeDrill()">&times;</button>
+            </div>
+            <div id="drillContent">
+                <!-- Drill content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

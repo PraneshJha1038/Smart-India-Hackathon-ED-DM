@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Modules - DisasterEd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/student-landing.css">
+    <script src="/js/modules.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="logo">DisasterEd</h1>
+                    <div class="header-subtitle">
+                        <p class="subtitle-main">Disaster Preparedness Education</p>
+                        <p class="subtitle-tagline">Building resilient and prepared communities</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">2</span>
+                    </div>
+                    <div class="user-profile">
+                        <span class="user-name">Pranesh jha</span>
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <h3 class="nav-section-title">Main Navigation</h3>
+                        <ul class="nav-menu">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Education Modules</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="drills.html" class="nav-link">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Virtual Drills</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="alerts.html" class="nav-link">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>Regional Alerts</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contacts.html" class="nav-link">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Emergency Contacts</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <h1 class="page-title">Education Modules</h1>
+                <p class="page-subtitle">Learn essential disaster preparedness skills through interactive modules</p>
+
+                <!-- Module Grid -->
+                <div class="module-grid">
+                    <!-- Earthquake Module -->
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3>Earthquake Basics</h3>
+                                <div class="module-meta">
+                                    <span class="duration">45 minutes</span>
+                                    <span class="difficulty">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="module-description">
+                            Learn essential earthquake safety and response techniques including Drop, Cover, and Hold On
+                            procedures.
+                        </p>
+                        <div class="module-progress">
+                            <div class="progress-header">
+                                <span class="progress-label">Progress</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="module-actions">
+                            <a href="#" class="btn btn--primary btn--small" onclick="startModule('earthquake')">Start
+                                Module</a>
+                            <a href="#" class="btn btn--outline btn--small">Preview</a>
+                        </div>
+                    </div>
+
+                    <!-- Fire Safety Module -->
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3>Fire Safety Essentials</h3>
+                                <div class="module-meta">
+                                    <span class="duration">30 minutes</span>
+                                    <span class="difficulty">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="module-description">
+                            Comprehensive fire prevention and evacuation strategies including escape planning and
+                            extinguisher use.
+                        </p>
+                        <div class="module-progress">
+                            <div class="progress-header">
+                                <span class="progress-label">Progress</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="module-actions">
+                            <a href="#" class="btn btn--primary btn--small" onclick="startModule('fire')">Start
+                                Module</a>
+                            <a href="#" class="btn btn--outline btn--small">Preview</a>
+                        </div>
+                    </div>
+
+                    <!-- Flood Module -->
+                    <div class="module-card">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <div class="module-info">
+                                <h3>Flood Preparedness</h3>
+                                <div class="module-meta">
+                                    <span class="duration">35 minutes</span>
+                                    <span class="difficulty">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="module-description">
+                            Flood safety measures and emergency response procedures including evacuation and recovery
+                            planning.
+                        </p>
+                        <div class="module-progress">
+                            <div class="progress-header">
+                                <span class="progress-label">Progress</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="module-actions">
+                            <a href="#" class="btn btn--primary btn--small" onclick="startModule('flood')">Start
+                                Module</a>
+                            <a href="#" class="btn btn--outline btn--small">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Overall Progress Section -->
+                <section class="learning-progress">
+                    <div class="section-header">
+                        <h3 class="section-title">Overall Learning Progress</h3>
+                        <p class="section-subtitle">Track your completion across all modules</p>
+                    </div>
+                    <div class="progress-overview">
+                        <div class="overall-progress">
+                            <div class="progress-header">
+                                <span class="progress-label">Overall Progress</span>
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>

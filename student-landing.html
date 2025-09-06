@@ -1,11 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DisasterEd - Disaster Preparedness Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/student-landing.css">
+    <script src="js/student-landing-2.js"></script>
 </head>
+
 <body>
-    This is a cat
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="logo">DisasterEd</h1>
+                    <div class="header-subtitle">
+                        <p class="subtitle-main">Disaster Preparedness Education</p>
+                        <p class="subtitle-tagline">Building resilient and prepared communities</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">2</span>
+                    </div>
+                    <div class="user-profile">
+                        <span class="user-name">Pranesh jha</span>
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <aside class="sidebar">
+                <nav class="sidebar-nav">
+                    <div class="nav-section">
+                        <h3 class="nav-section-title">Main Navigation</h3>
+                        <ul class="nav-menu">
+                            <li class="nav-item active" data-page="dashboard">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-page="modules">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Education Modules</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-page="drills">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Virtual Drills</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-page="alerts">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <span>Regional Alerts</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-page="contacts">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-phone"></i>
+                                    <span>Emergency Contacts</span>
+                                </a>
+                            </li>
+                            <li class="nav-item" data-page="settings">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-cog"></i>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+
+            
+            <main class="main-content">
+                
+                <div id="dashboard-page" class="page-content active">
+                    
+                    <section class="welcome-banner">
+                        <div class="banner-content">
+                            <div class="banner-text">
+                                <h2 class="welcome-title">Welcome back, Pranesh jha!</h2>
+                                <p class="welcome-subtitle">Continue your disaster preparedness journey and help build a
+                                    safer community.</p>
+                                <div class="banner-actions">
+                                    <button class="btn btn--primary btn--lg" data-navigate="modules">Continue
+                                        Learning</button>
+                                    <button class="btn btn--outline btn--lg" data-navigate="drills">Practice
+                                        Drills</button>
+                                </div>
+                            </div>
+                            <div class="banner-image">
+                                <div class="community-visual">
+                                    <div class="community-icons">
+                                        <i class="fas fa-users"></i>
+                                        <i class="fas fa-shield-alt"></i>
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <div class="community-text">Building Safer Communities</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+                    <section class="dashboard-metrics">
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <div class="metric-value" id="preparedness-score">0</div>
+                                    <div class="metric-label">Preparedness Score</div>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <div class="metric-value" id="modules-completed">0/3</div>
+                                    <div class="metric-label">Modules Completed</div>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <div class="metric-value" id="badges-earned">0</div>
+                                    <div class="metric-label">Badges Earned</div>
+                                </div>
+                            </div>
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="metric-content">
+                                    <div class="metric-value" id="class-rank">#-</div>
+                                    <div class="metric-label">Class Rank</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+                    <section class="quick-actions">
+                        <div class="section-header">
+                            <h3 class="section-title">Quick Actions</h3>
+                            <p class="section-subtitle">Jump into your learning journey</p>
+                        </div>
+                        <div class="actions-grid">
+                            <div class="action-card" data-navigate="modules">
+                                <div class="action-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="action-content">
+                                    <h4 class="action-title">Education Modules</h4>
+                                    <p class="action-description">Continue your learning journey</p>
+                                    <div class="action-status" id="modules-status">0/3 completed</div>
+                                </div>
+                            </div>
+                            <div class="action-card" data-navigate="drills">
+                                <div class="action-icon">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <div class="action-content">
+                                    <h4 class="action-title">Virtual Drills</h4>
+                                    <p class="action-description">Practice emergency scenarios</p>
+                                    <div class="action-status" id="drills-status">0 drills completed</div>
+                                </div>
+                            </div>
+                            <div class="action-card" data-navigate="alerts">
+                                <div class="action-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="action-content">
+                                    <h4 class="action-title">Regional Alerts</h4>
+                                    <p class="action-description">Stay informed about emergencies</p>
+                                    <div class="action-status">2 active alerts</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    
+                    <section class="alerts-banner">
+                        <div class="alert-content">
+                            <i class="fas fa-exclamation-triangle alert-icon"></i>
+                            <div class="alert-text">
+                                <span class="alert-message">2 active alerts in your region</span>
+                            </div>
+                            <a href="#" class="alert-link" data-navigate="alerts">View all alerts</a>
+                        </div>
+                    </section>
+
+                    
+                    <section class="learning-progress">
+                        <div class="section-header">
+                            <h3 class="section-title">Learning Progress</h3>
+                            <p class="section-subtitle">Track your disaster preparedness education journey</p>
+                        </div>
+                        <div class="progress-overview">
+                            <div class="overall-progress">
+                                <div class="progress-header">
+                                    <span class="progress-label">Overall Progress</span>
+                                    <span class="progress-percentage" id="overall-progress">0%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="overall-progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modules-progress" id="modules-progress-list">
+                            <!-- Dynamic content will be inserted here -->
+                        </div>
+                    </section>
+
+                    <!-- Recent Activity -->
+                    <section class="recent-activity">
+                        <div class="section-header">
+                            <h3 class="section-title">Recent Activity</h3>
+                            <p class="section-subtitle">Your latest achievements and progress</p>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-list" id="activity-list">
+                                <!-- Dynamic content will be inserted here -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                
+                <div id="modules-page" class="page-content">
+                    <div class="page-header">
+                        <h2 class="page-title">Education Modules</h2>
+                        <p class="page-subtitle">Learn essential disaster preparedness skills</p>
+                    </div>
+                    <div class="modules-grid" id="modules-grid">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+
+                
+                <div id="drills-page" class="page-content">
+                    <div class="page-header">
+                        <h2 class="page-title">Virtual Drills</h2>
+                        <p class="page-subtitle">Practice emergency response scenarios</p>
+                    </div>
+                    <div class="drills-grid" id="drills-grid">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+
+                
+                <div id="alerts-page" class="page-content">
+                    <div class="page-header">
+                        <h2 class="page-title">Regional Alerts</h2>
+                        <p class="page-subtitle">Stay informed about local emergencies</p>
+                    </div>
+                    <div class="alerts-list" id="alerts-list">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+
+                
+                <div id="contacts-page" class="page-content">
+                    <div class="page-header">
+                        <h2 class="page-title">Emergency Contacts</h2>
+                        <p class="page-subtitle">Important phone numbers for emergencies</p>
+                    </div>
+                    <div class="contacts-sections" id="contacts-sections">
+                        <!-- Dynamic content will be inserted here -->
+                    </div>
+                </div>
+
+                
+                <div id="settings-page" class="page-content">
+                    <div class="page-header">
+                        <h2 class="page-title">Settings</h2>
+                        <p class="page-subtitle">Manage your profile and preferences</p>
+                    </div>
+                    <div class="settings-sections">
+                        <div class="settings-section">
+                            <div class="section-header">
+                                <h3 class="section-title">Profile Information</h3>
+                                <p class="section-subtitle">Update your personal details</p>
+                            </div>
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="form-group">
+                                        <label class="form-label" for="full-name">Full Name</label>
+                                        <input type="text" id="full-name" class="form-control" value="Pranesh jha">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="email">Email Address</label>
+                                        <input type="email" id="email" class="form-control" value="pranesh@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label" for="location">Location</label>
+                                        <input type="text" id="location" class="form-control" value="Campus Dormitory">
+                                    </div>
+                                    <button class="btn btn--primary">Update Profile</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-section">
+                            <div class="section-header">
+                                <h3 class="section-title">Notification Preferences</h3>
+                                <p class="section-subtitle">Choose how you want to receive alerts</p>
+                            </div>
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <input type="checkbox" checked> Emergency Alerts
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <input type="checkbox" checked> Weather Warnings
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <input type="checkbox"> Campus Announcements
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">
+                                            <input type="checkbox" checked> Learning Reminders
+                                        </label>
+                                    </div>
+                                    <button class="btn btn--primary">Save Preferences</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="settings-section">
+                            <div class="section-header">
+                                <h3 class="section-title">Progress Management</h3>
+                                <p class="section-subtitle">Reset or export your learning data</p>
+                            </div>
+                            <div class="card">
+                                <div class="card__body">
+                                    <div class="flex gap-16">
+                                        <button class="btn btn--outline">Export Progress</button>
+                                        <button class="btn btn--outline"
+                                            style="color: var(--color-error); border-color: var(--color-error);">Reset
+                                            All Progress</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="module-detail-page" class="page-content">
+                    <div class="module-detail-content">
+                        
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+        
+    <div id="drill-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="drill-modal-title">Emergency Drill</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body" id="drill-modal-body">
+                <!-- Dynamic drill content -->
+            </div>
+        </div>
+    </div>
+
+
 </body>
+
 </html>

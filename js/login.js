@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => circle.remove(), 600);
   });
 });
-// Hardcoded sample user data
-// Hardcoded sample user data
+
 const sampleUsers = [
   {
     username: 'Pranesh Jha',
@@ -27,35 +26,35 @@ const sampleUsers = [
   },
   {
     username: 'Admin',
-    password: 'AdminPassword',
+    password: 'Admin@123',
     isAdmin: true
   }
 ];
 
-// Handle login function
 function handleLogin(username, password) {
-  // Find the user in the sample data
   const user = sampleUsers.find(u => u.username === username && u.password === password);
 
   const errorMessage = document.getElementById('error-message');
 
   if (user) {
-    // Clear the error message
     errorMessage.textContent = '';
     errorMessage.style.display = 'none';
 
-    // Redirect based on user type
     if (user.isAdmin) {
-      window.location.href = 'admin-landing.html';
+      errorMessage.textContent = 'Please login through the admin page.';
+      errorMessage.style.display = 'block';
+      
+      setTimeout(() => {
+      errorMessage.style.display = 'none';
+      errorMessage.textContent = '';
+    }, 3000);
     } else {
-      window.location.href = 'user-landing.html';
+      window.location.href = 'student-landing.html';
     }
   } else {
-    // Show error message
     errorMessage.textContent = 'Invalid username or password';
     errorMessage.style.display = 'block';
 
-    // Hide the message after 3 seconds
     setTimeout(() => {
       errorMessage.style.display = 'none';
       errorMessage.textContent = '';

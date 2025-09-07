@@ -14,6 +14,9 @@ h3,
 h4 {
     margin: 0 0 10px 0;
     color: black;
+    font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
 }
 
 p {
@@ -121,11 +124,13 @@ nav {
 .primary-btn {
     background-color: #0077ff;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .primary-btn:hover {
     background-color: #005bbb;
-    transform: translateY(-3px);
+    transform: translateY(-1px);
+    transition: all 0.9s;
 }
 
 .secondary-btn {
@@ -283,4 +288,18 @@ nav {
     font-size: 1.2rem;
     margin-bottom: 30px;
 }
+#hero-heading {
+    font-family: "Epunda Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
 
+#hero-subtext {
+    font-family: monospace;
+    font-weight: 700;
+}
+
+#hero-buttons-vm {
+    display: none;
+}

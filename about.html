@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Pranesh Jha" />
+    <meta name="description" content="Why Ed Disaster exists - Understanding India's disaster history and our mission" />
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" href="img/fire.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/about.css">
+    <script src="js/about.js"></script>
+    <title>About - ED Disaster</title>
+
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="branding">
+                <div id="brand-logo">
+                    <img src="img/sih31x32.png" width="32" height="32" title="Ed Disaster" alt="Ed Disaster">
+                </div>
+                <div id="brand-name">
+                    <span>Ed Disaster</span>
+                </div>
+            </div>
+            <div class="quicklinks">
+                <a href="index.html" class="quick-a">Home</a>
+                <a href="about.html" class="quick-a">About</a>
+                <a href="login.html" class="quick-a" target="_blank" rel="noopener">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Why <span style="color: #00d4ff;">Disasters</span> Happen</h1>
+            <p>Every year, natural disasters claim thousands of lives across India. But here's the thing - <strong style="color: #00d4ff;">most disaster deaths are preventable</strong>. The difference between tragedy and survival often comes down to one thing: <strong>preparation</strong>.</p>
+
+            <div class="alert-box">
+                <div class="alert-icon">⚠️</div>
+                <h3>In the last 20 years, over 200,000 Indians have lost their lives to natural disasters.</h3>
+                <p>But communities with disaster preparedness training show 90% fewer casualties.</p>
+            </div>
+        </section>
+
+        <!-- Disaster Timeline Section -->
+        <section class="content-section">
+            <h2>Lessons Written in Loss</h2>
+            <p>Understanding India's major disasters - not just the numbers, but the stories they tell</p>
+
+            <div class="timeline-container">
+                <div class="timeline-nav">
+                    <button class="nav-btn" onclick="changeDisaster(-1)">‹</button>
+                    <button class="nav-btn" onclick="changeDisaster(1)">›</button>
+                </div>
+
+                <div class="disaster-cards">
+                    <!-- Cards populated by JS -->
+                </div>
+
+                <!-- Selected Disaster Details -->
+                <div class="disaster-detail" id="disaster-detail">
+                    <div class="disaster-image">
+                        <img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=800&h=400&fit=crop" alt="Kashmir Earthquake" id="disaster-img">
+                        <div class="disaster-badge" id="disaster-badge">7.6 Magnitude</div>
+                    </div>
+                    <div class="disaster-content">
+                        <div class="disaster-location" id="disaster-location">
+                            📍 Pakistan-administered Kashmir & Northern India
+                        </div>
+                        <h3 class="disaster-title" id="disaster-title">Kashmir Earthquake 2005</h3>
+
+                        <div class="disaster-stats">
+                            <div class="stat-box casualties">
+                                <div class="stat-label">Lives Lost</div>
+                                <div class="stat-value" id="stat-casualties">73,000+ lives lost</div>
+                            </div>
+                            <div class="stat-box affected">
+                                <div class="stat-label">People Affected</div>
+                                <div class="stat-value" id="stat-affected">3.5 million people affected</div>
+                            </div>
+                        </div>
+
+                        <p class="disaster-description" id="disaster-description">
+                            The deadliest earthquake in South Asia's recorded history struck at 8:50 AM on a Saturday morning. Most victims were trapped in collapsed buildings - concrete structures that became death traps. Children were in schools, families were having breakfast. In 90 seconds, entire communities disappeared.
+                        </p>
+
+                        <div class="disaster-lesson">
+                            <div class="lesson-title">The Lesson:</div>
+                            <p class="lesson-text" id="disaster-lesson">
+                                Most deaths occurred due to building collapses. Proper evacuation drills and earthquake-resistant construction knowledge could have saved tens of thousands of lives.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding Disasters Section -->
+        <section class="content-section blue-bg">
+            <h2>Understanding Disasters: Beyond the Headlines</h2>
+            <p>Knowledge is the first line of defense</p>
+
+            <div class="understanding-grid">
+                <!-- Video card 1 -->
+                <div class="video-card" data-video-id="cavq2HFBa-U" data-video-title="Understanding Earthquakes: The Invisible Threat">
+                    <div class="video-thumbnail">
+                        <!-- thumbnail from YouTube -->
+                        <img src="https://img.youtube.com/vi/cavq2HFBa-U/hqdefault.jpg" alt="Understanding Earthquakes thumbnail">
+                        <button class="play-btn" aria-label="Play video 1">▶</button>
+                        <div class="video-duration">8:45</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Understanding Earthquakes: The Invisible Threat</h3>
+                        <p class="video-description">Why do buildings collapse? How do earthquake waves travel? A visual journey into understanding seismic disasters.</p>
+                    </div>
+                </div>
+
+                <!-- Video card 2 -->
+                <div class="video-card" data-video-id="ivUKLr8q4sE" data-video-title="Flood Myths vs. Reality">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/ivUKLr8q4sE/hqdefault.jpg" alt="Flood Myths thumbnail">
+                        <button class="play-btn" aria-label="Play video 2">▶</button>
+                        <div class="video-duration">12:30</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Flood Myths vs. Reality</h3>
+                        <p class="video-description">Debunking common flood myths and understanding how water behaves during disasters.</p>
+                    </div>
+                </div>
+
+                <!-- Video card 3 -->
+                <div class="video-card" data-video-id="mKm9NJzPzow" data-video-title="Cyclone Formation: Nature's Most Powerful Engine">
+                    <div class="video-thumbnail">
+                        <img src="https://img.youtube.com/vi/mKm9NJzPzow/hqdefault.jpg" alt="Cyclone Formation thumbnail">
+                        <button class="play-btn" aria-label="Play video 3">▶</button>
+                        <div class="video-duration">10:15</div>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Cyclone Formation: Nature's Most Powerful Engine</h3>
+                        <p class="video-description">From tropical disturbance to super cyclone - witness the birth of nature's most powerful storms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="disaster-formula">
+                <h3 class="formula-title">What Makes a Natural Event a 'Disaster'?</h3>
+                <div class="formula-grid">
+                    <div class="formula-item">
+                        <div class="formula-icon hazard">🌍</div>
+                        <h4 class="formula-label">Natural Hazard</h4>
+                        <p class="formula-description">Earthquake, flood, cyclone - nature's raw power</p>
+                    </div>
+                    <div class="formula-operator">+</div>
+                    <div class="formula-item">
+                        <div class="formula-icon vulnerable">👥</div>
+                        <h4 class="formula-label">Vulnerable Community</h4>
+                        <p class="formula-description">People without preparation or resilient infrastructure</p>
+                    </div>
+                    <div class="formula-operator">=</div>
+                    <div class="formula-item">
+                        <div class="formula-icon disaster">💔</div>
+                        <h4 class="formula-label">Disaster</h4>
+                        <p class="formula-description">Loss of life, property, and community disruption</p>
+                    </div>
+                </div>
+                <div class="formula-conclusion">
+                    <p>The good news? We can reduce vulnerability through education, preparation, and community resilience.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hero Stories -->
+        <section class="content-section">
+            <h2>When Preparation Meets Crisis</h2>
+            <p>Real stories of ordinary people doing extraordinary things</p>
+
+            <div class="hero-stories-grid">
+                <div class="hero-story">
+                    <img src="https://indianexpress.com/wp-content/uploads/2017/08/bihar2.jpg" alt="Hero Story">
+                    <div class="story-location">📍 Bihar, 2008</div>
+                    <h3 class="story-title">Commander of Kosi Flood Rescue</h3>
+                    <p class="story-text">During the 2008 Kosi floods, NDRF commander Aniruddh Kumar led massive rescue operations, deploying boats and air support to save thousands. His leadership ensured safe evacuation of vulnerable groups, proving the importance of organized disaster response.</p>
+                </div>
+
+                <div class="hero-story">
+                    <img src="https://wwwcdn.imo.org/localresources/fr/MediaCentre/PublishingImages/IMG_8724%20(1).jpg
+                       " alt="Hero Story">
+                    <div class="story-location">📍 Andhra Pradesh, 2015</div>
+                    <h3 class="story-title">Bravery at Bay of Bengal</h3>
+                    <p class="story-text">Captain Radhika Menon braved violent seas to rescue seven stranded fishermen in the Bay of Bengal. Maneuvering her oil tanker through towering waves, she risked everything, becoming the first woman to win the IMO bravery award.</p>
+                </div>
+
+                <div class="hero-story">
+                    <img src="https://media.assettype.com/thenewsminute%2Fimport%2Fsites%2Fdefault%2Ffiles%2FResidents_of_Mahalakshmi_Nagar_in_Kanchipuram_being_evacuated.JPG?w=1024&auto=format%2Ccompress&fit=max" alt="Hero Story">
+                    <div class="story-location">📍 Tamil Nadu, 2021</div>
+                    <h3 class="story-title">The Fisherman's Weather Wisdom</h3>
+                    <p class="story-text">Raman's traditional knowledge of reading ocean patterns, combined with modern weather alerts, helped him warn 50+ fishing boats about an incoming storm, preventing what could have been a major maritime disaster.</p>
+                </div>
+            </div>
+
+            <!-- Login CTA after stories -->
+            <div style="margin-top: 60px;">
+                <h3 style="color: #333; margin-bottom: 20px;">Ready to Be Part of These Heroes?</h3>
+                <p style="color: #666; margin-bottom: 30px;">Join our platform and learn the skills that can make you a disaster hero in your community.</p>
+                <a href="login.html" class="btn primary-btn" style="font-size: 1.1rem; padding: 15px 30px;">Start Your Journey - Login Now</a>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <h2>This Is Why We Exist</h2>
+            <p>Every child who knows what to do during an earthquake. Every teacher who can coordinate an evacuation. Every community that responds with unity instead of panic. This is our mission - turning knowledge into survival, preparation into protection.</p>
+
+            <div class="mission-stats">
+                <div class="mission-stat">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-description">fewer casualties in prepared communities</div>
+                </div>
+                <div class="mission-stat">
+                    <div class="stat-number">60 sec</div>
+                    <div class="stat-description">average time to evacuate when trained</div>
+                </div>
+                <div class="mission-stat">
+                    <div class="stat-number">1 child</div>
+                    <div class="stat-description">can save an entire family</div>
+                </div>
+            </div>
+
+            <p>We believe every Indian deserves to face disasters with confidence, not fear. Through technology, education, and community building, we're creating a generation that doesn't just survive disasters - they lead through them.</p>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <h2>Ready to Be Part of the Solution?</h2>
+            <p>Understanding the 'why' is just the beginning. Now discover the 'how' - learn about our platform, our methods, and how we're building disaster-resilient communities across India.</p>
+
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="index.html" class="btn primary-btn">Start Learning Today</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="backdrop" id="videoModalBackdrop"></div>
+        <div class="modal-inner" role="document" aria-label="Video player">
+            <button class="close-btn" id="videoModalClose" aria-label="Close video">✕</button>
+            <!-- iframe injected by JS -->
+            <div id="videoFrameContainer"></div>
+        </div>
+    </div>
+
+   
+</body>
+
+</html>

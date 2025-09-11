@@ -1,146 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Pranesh Jha">
-    <meta name="description" content="This is the generic landing page for the disaster management">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="img/fire.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-
-    <script src="js/main.js" defer></script>
-    <title>ED Disaster</title>
+    <meta name="description" content="DisasterEd - Professional disaster preparedness education platform">
+    <title>DisasterEd - Be Prepared. Stay Safe.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
-
 <body>
-    <header>
-        <nav>
-            <div class="branding">
-                <div class="branding" id="brand-logo">
-                    <img src="img/sih31x32.png" width="32" height="32" title="Ed Disaster" alt="Ed Disaster">
-                </div>
-                <div class="branding" id="brand-name">
-                    <span class="branding">
-                        Ed Disaster
-                    </span>
-                </div>
-            </div>
-            <div class="quicklinks">
-                <div class="quicklinks" id="Home">
-                    <a href="index.html" class="quick-a">Home</a>
-                </div>
-                <div class="quicklinks" id="About">
-                    <a href="about.html" target="_self" class="quick-a">About</a>
-                </div>
-                <div class="quicklinks" id="login">
-                    <a href="login.html" target="_blank" rel="noopener" class="quick-a" id="lgrsa">Login</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-
-        <section class="hero fade-in">
-    <div class="hero-content">
-        <h1 id="hero-heading">Be Prepared. Stay Safe.</h1>
-        <p id="hero-subtext">Interactive disaster education for students and schools. Learn, simulate, and stay ready for any emergency.</p>
-        <div class="hero-buttons">
-            <a href="login.html" class="btn primary-btn">Get Started</a>
-            <a href="modules.html" id="hero-buttons-vm" style="display: none;" class="btn secondary-btn">View Modules</a>
+    <!-- Alert Bar -->
+    <div id="alert-bar" class="alert-bar">
+        <div class="alert-content">
+            <span>🚨 DEMO: Heavy rainfall alert for Delhi NCR - Stay updated!</span>
+            <button class="alert-close" onclick="closeAlert()">×</button>
         </div>
     </div>
-</section>
 
-
-        <section class="features">
-            <h2 class="fade-in">Our Features</h2>
-            <div class="features-grid">
-                <div class="feature-card slide-left">
-                    <img src="img/modules500x500.png" width="60" height="60" alt="Learning Modules"
-                        style="border-radius: 10px;">
-                    <h3>Interactive Modules</h3>
-                    <p>Engage with quizzes, videos, and simulations to learn about disaster preparedness.</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">🛡️</div>
+                    <span class="logo-text">DisasterEd</span>
                 </div>
-                <div class="feature-card slide-right">
-                    <img src="img/fire.png" loading="lazy" alt="Virtual Drills">
-                    <h3>Virtual Drills</h3>
-                    <p>Participate in gamified disaster drills to practice your skills safely.</p>
-                </div>
-                <div class="feature-card slide-left">
-                    <img src="img/alert.png" loading="lazy" alt="Alerts">
-                    <h3>Region-Specific Alerts</h3>
-                    <p>Receive updates and notifications tailored to your area’s disaster risks.</p>
-                </div>
-                <div class="feature-card slide-right">
-                    <img src="img/learning-modules180x180.png" loading="lazy" alt="Dashboard">
-                    <h3>Dashboard & Tracking</h3>
-                    <p>Track your progress, scores, and drill participation over time.</p>
+                <nav class="nav">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Our Mission</a>
+                    <a href="#" class="nav-link">About Us</a>
+                </nav>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <button class="btn btn-primary">Get Started</button>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <section class="how-it-works fade-in">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step fade-in">
-                    <h3>1. Register & Login</h3>
-                    <p>Create your account and get started with interactive learning.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <h1 class="hero-title">
+                        <span class="title-primary">Be Prepared.</span>
+                        <span class="title-secondary">Stay Safe.</span>
+                    </h1>
+                    <p class="hero-subtitle">Interactive disaster education for students and schools. Learn through Mini Games, Virtual Drills, Interactive Models, get real-time alerts, and build confidence to face any emergency.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large">Start Learning Free</button>
+                        <button class="btn btn-outline btn-large">▶ Watch Demo</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stats-badge">
+                            <span class="stats-number">0K+</span>
+                            <span class="stats-label">Active Students</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="step fade-in">
-                    <h3>2. Learn & Explore</h3>
-                    <p>Go through modules, quizzes, and simulations at your own pace.</p>
-                </div>
-                <div class="step fade-in">
-                    <h3>3. Participate & Track</h3>
-                    <p>Join virtual drills, earn badges, and track your preparedness score.</p>
+
+                <div class="hero-right">
+                    <div class="alert-widget">
+                        <div class="alert-header">
+                            <div class="alert-title">
+                                <span class="alert-icon">⚠️</span>
+                                <span>DisasterEd Alert</span>
+                            </div>
+                            <span class="alert-live">LIVE</span>
+                        </div>
+                        <div class="alert-body">
+                            <div class="alert-type">
+                                <span class="lightning-icon">⚡</span>
+                                <span class="alert-name">Thunderstorm Warning</span>
+                            </div>
+                            <p class="alert-message">Severe weather approaching your area in 30 minutes</p>
+                            <div class="checklist">
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check1">
+                                    <label for="check1">Stay indoors and avoid windows</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check2">
+                                    <label for="check2">Charge devices and prepare flashlight</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="check3">
+                                    <label for="check3">Know your safe room location</label>
+                                </div>
+                            </div>
+                            <div class="alert-actions">
+                                <button class="btn btn-white">View Details</button>
+                                <button class="btn btn-blue">Share Alert</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="testimonials">
-            <h2 class="fade-in">What Students & Teachers Say</h2>
+    <!-- Steps Section -->
+    <section class="steps-section">
+        <div class="container">
+            <div class="steps-header">
+                <h2 class="section-title">Start Your Safety Journey</h2>
+                <p class="section-subtitle">Three simple steps to become disaster-ready</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number blue">1</div>
+                    <h3 class="step-title">Sign Up & Assess</h3>
+                    <p class="step-description">Create your account and take our quick preparedness assessment to identify your learning needs.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number green">2</div>
+                    <h3 class="step-title">Learn & Practice</h3>
+                    <p class="step-description">Engage with interactive modules, simulations, and real-world scenarios tailored to your location.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number purple">3</div>
+                    <h3 class="step-title">Stay Alert & Ready</h3>
+                    <p class="step-description">Receive real-time alerts, participate in community drills, and maintain your preparedness score.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <h2 class="section-title">Trusted by Students & Educators</h2>
+                <p class="section-subtitle">Real stories from our growing community of prepared citizens</p>
+            </div>
             <div class="testimonials-grid">
-                <div class="testimonial slide-left">
-                    <p>"This platform helped our school prepare for emergencies like never before. Highly recommended!"
-                    </p>
-                    <h4>- Riya, Student</h4>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar blue-avatar">PS</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"The earthquake simulation helped me stay calm during our school's real emergency drill!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-name">Priya Sharma</div>
+                            <div class="author-title">Class 10 Student</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial slide-right">
-                    <p>"Interactive drills and alerts make learning about disasters engaging and practical."</p>
-                    <h4>- Mr. Sharma, Teacher</h4>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar orange-avatar">RK</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Our students' confidence in emergency situations has improved dramatically."</p>
+                        <div class="testimonial-author">
+                            <div class="author-name">Mr. Rajesh Kumar</div>
+                            <div class="author-title">School Principal</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial slide-left">
-                    <p>"The dashboard lets us track student participation and readiness effectively."</p>
-                    <h4>- Principal, XYZ School</h4>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar teal-avatar">AP</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"This platform is revolutionizing how we approach community preparedness."</p>
+                        <div class="testimonial-author">
+                            <div class="author-name">Dr. Anita Patel</div>
+                            <div class="author-title">Disaster Management Officer</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="cta fade-in">
-            <h2>Ready to Start Learning?</h2>
-            <p>Join thousands of students preparing for a safer future.</p>
-            <a href="login.html" class="btn primary-btn">Start Now</a>
-        </section>
-    </main>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Join 0+ Students Building a Safer Future</h2>
+                <p class="cta-subtitle">Don't wait for disaster to strike. Start your preparedness journey today and become a community safety leader.</p>
+                <button class="btn btn-primary btn-large">Get Started Free →</button>
+            </div>
+        </div>
+    </section>
 </body>
-
-
 </html>
-
-
-
-
-
-
-
